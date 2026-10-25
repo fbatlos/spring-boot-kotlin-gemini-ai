@@ -109,6 +109,7 @@ class AiService(private val chatClientBuilder: ChatClient.Builder, private  val 
                 task.updatedAt = LocalDateTime.now()
                 taskRepository.save(task)
 
+
             } catch (e: Exception) {
                 // Registrar fallo en caso de error
                 task.status = TaskStatus.FAILED
